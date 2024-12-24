@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZIGMA DESIGNERS</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1c1c1c, #3b3b3b);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: rgba(0, 0, 0, 0.9);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            animation: fadeInDown 1s ease;
+        }
+
+        header img {
+            height: 80px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 600;
+            padding: 10px 15px;
+            transition: all 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #00d1b2;
+            text-shadow: 0 0 8px #00d1b2;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 150px 20px;
+            background: url('zigma.png') no-repeat center center;
+            background-size: cover;
+            position: relative;
+            animation: zoomIn 1.5s ease-in-out;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+            animation: slideInDown 1.5s ease;
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            position: relative;
+            z-index: 1;
+            animation: slideInUp 1.5s ease;
+        }
+
+        .projects, .about {
+            padding: 60px 20px;
+            background: rgba(0, 0, 0, 0.85);
+            margin: 20px auto;
+            border-radius: 10px;
+            max-width: 1200px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+        }
+
+        .projects h2, .about h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .project-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .project-gallery img {
+            height: 200px;
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            object-fit: cover;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-gallery img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .about p {
+            margin: 20px 0;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .contact-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .contact-icons a {
+            color: #fff;
+            font-size: 2em;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .contact-icons a:hover {
+            color: #00d1b2;
+            transform: scale(1.2);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            .hero p {
+                font-size: 1.2em;
+            }
+
+            header img {
+                height: 50px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="DESIGNERS (1).png" alt="Zigma Designers Logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="po.html">Projects</a></li>
+                <li><a href="co.html">About & Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+   
+
+    <section class="projects" id="projects">
+        <h2>- OUR PROJECTS -</h2>
+        <div class="project-gallery">
+            <img src="O1.png" alt="Project 1">
+            <img src="O2.png" alt="Project 2">
+            <img src="O3.jpeg" alt="Project 3">
+            <img src="O5.png" alt="Project 1">
+            <img src="1.png" alt="Project 2">
+            <img src="O4.png" alt="Project 3">
+        </div>
+    </section>
+
+    
+    <footer>
+        <p>&copy; 2024 ZIGMA DESIGNERS. All rights reserved.</p>
+    </footer>
+</body>
+</html>
